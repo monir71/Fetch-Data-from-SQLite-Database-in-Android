@@ -1,12 +1,12 @@
 Created a data model as under:
-
+```
 public class MyDBModel {
     int id;
     String name, contact_no;
 }
-
+```
 Helper Method for fetching data:
-
+```
     public ArrayList<MyDBModel> fetchData()
     {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -25,9 +25,9 @@ Helper Method for fetching data:
 
         return dataList;
     }
-
+```
 Logged fetched data:
-
+```
         try {
             MyDBHelper dbHelper = new MyDBHelper(this);
             ArrayList<MyDBModel> data = dbHelper.fetchData();
@@ -40,3 +40,4 @@ Logged fetched data:
         {
             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
         }
+```
